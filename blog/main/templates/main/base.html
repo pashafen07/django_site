@@ -1,0 +1,47 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>ТВОЙ - БЛОГ</title>
+        <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+        </style>
+        {% block style %}{% endblock %}
+    </head>
+    <body>
+        <header>
+            <h1>ТВОЙ - БЛОГ</h1>
+            <div id="header-menu">
+                <a href="{% url 'home' %}" class="header-link">
+                    <h3>Главная</h3>
+                </a>
+                <a href="{% url 'blog' %}" class="header-link">
+                    <h3>Блоги</h3>
+                </a>
+            </div>
+            <a href="{% url 'new_blog' %}">
+                <button>Создать блог</button>
+            </a>
+        </header>
+        <main>
+            <h2>ТВОЙ - БЛОГ</h2>
+            {% block content %}{% endblock %}
+        </main>
+    <footer>
+        <h2>ТВОЙ - БЛОГ</h2>
+        <div class="footer-containers">
+            <a href="https://vk.com/id358138754" class="header-link">
+                <img src="{% static 'main/img/vk-img.png' %}" alt="">
+            </a>
+            <a href="https://github.com/KrokodilGena07" class="header-link">
+                <img src="{% static 'main/img/github-img.png' %}" alt="">
+            </a>
+        </div>
+    </footer>
+    </body>
+</html>

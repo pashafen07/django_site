@@ -1,0 +1,98 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+header
+{
+    border-bottom: 4px gainsboro solid;
+    padding: 1%;
+    margin: 0 30%;
+}
+
+h1,
+h2,
+h3
+{
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+    color:rgb(153, 153, 153)
+}
+
+p
+{
+    margin: 3% 0;
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+    color:rgb(105, 105, 105);
+    font-size: large;
+}
+
+#header-menu
+{
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2px;
+}
+
+.header-link
+{
+    text-decoration: none;
+}
+.header-link:hover
+{
+    text-decoration: underline;
+    color:rgb(153, 153, 153)
+}
+
+button
+{
+    width: 30%;
+    padding: 2%;
+    border: 2px solid deepskyblue;
+    background-color: white;
+    border-radius: 20px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: large;
+    color: deepskyblue;
+    margin: 0 35%;
+    transition-property: border-color, background-color, color;
+	transition-duration: 100ms;
+	transition-timing-function: linear;
+    background-color: white;
+    border-color: deepskyblue;
+    color: deepskyblue;
+}
+button:hover
+{
+    background-color: deepskyblue;
+    border-color: deepskyblue;
+    color: white;
+    cursor: pointer;
+}
+
+main
+{
+    margin: 3% 30%;
+}
+
+footer
+{
+    padding: 1%;
+    margin: 0 30%;
+    border-top: 4px gainsboro solid;
+}
+
+.footer-containers
+{
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+footer a
+{
+    margin: 0 20%;
+}

@@ -1,0 +1,62 @@
+{% extends 'main/base.html' %}
+
+{% block style %}
+<style>
+    form
+    {
+        display: flex;
+        flex-direction: column;
+        margin: 0 20%;
+        border: 3px gainsboro solid;
+        border-radius: 20px;
+        padding: 3%;
+        margin-top: 2%;
+    }
+    .form-item
+    {
+        margin: 3% 0;
+        border: 1px gainsboro solid;
+        border-radius: 10px;
+        padding: 2%;
+        font-size: large;
+    }
+    .text-input
+    {
+        color: #696969;
+    }
+    .text-input:focus
+    {
+        outline: none;
+        border-color: #696969;
+    }
+    input[type=submit]
+    {
+        width: 40%;
+        margin: 0 30%;
+        color: #00BFFF;
+        background-color: white;
+        transition-property: background-color, border-color, color;
+        transition-duration: 50ms;
+        transition-timing-function: linear;
+    }
+    input[type=submit]:hover
+    {
+        border-color: #00BFFF;
+        background-color: #00BFFF;
+        cursor: pointer;
+        color: white;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<h3>Создай новый блог!</h3>
+<div>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.title }}
+        {{ form.text }}
+        <input type="submit" value="Создать блог" class="form-item">
+    </form>
+</div>
+{% endblock %}

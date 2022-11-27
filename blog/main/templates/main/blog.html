@@ -1,0 +1,29 @@
+{% extends 'main/base.html' %}
+
+{% block style %}
+<style>
+    #blogs
+    {
+        margin-top: 2%;
+    }
+    .blog
+    {
+        background-color: #DCDCDC;
+        border-radius: 20px;
+        padding: 1%;
+        margin: 2% 0;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<h3>Блоги</h3>
+<div id="blogs">
+    {% for blog in blogs %}
+    <div class="blog">
+        <h1>{{ blog.title }}</h1>
+        <h3>{{ blog.text}}</h3>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
